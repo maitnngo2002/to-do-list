@@ -11,7 +11,9 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-maingo:Ngothingocmai@2002@cluster0.nzu9j.mongodb.net/todolistDB", {useNewUrlParser: true});
+const url = "" // copy your url to the cluster on mongodb cloud here
+// example: "mongodb+srv://admin-name:<Password>@cluster0.nzu9j.mongodb.net/todolistDB"
+mongoose.connect(url, {useNewUrlParser: true});
 
 // const day = date.getDate();
 const itemsSchema = {
